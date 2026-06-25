@@ -51,7 +51,7 @@ class TaskModelTestCase(TestCase):
         task = Task(title='task1', due_at=None)
         task.save()
 
-        self.assertTrue(task.is_overdue(current))
+        self.assertFalse(task.is_overdue(current))
 
 
 class TodoViewTestCase(TestCase):
